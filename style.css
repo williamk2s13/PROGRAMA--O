@@ -1,14 +1,56 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-body{
+h1{
+    color: aliceblue;
+}
+.fundo{
+    display: flex;
+    justify-content: center;
+   top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    align-items: center ;
     background-color: #1c1c1c;
 }
-h2{
-    display: flex;
-    justifyj-content: center;
+.login{
+   
+    border-radius: 12px;
+    background-color: #3e92cc;
+    padding: 12px;
+    height: 450px;
+    width: 350px;
     justify-items: center;
-    align-items:center;
-    background-color:rgb(122, 122, 122);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}h1
+{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+}
+input{
+   border: none;
+    width: 257px;
+    height: 30px;
+}
+.formulario{
+  gap: 24px;
+  display: flex;
+  flex-direction: column; 
+}
+.open{
+    display: flex;
+   justify-content: center;
+    position: absolute;
+    width: 70px;
+    height: 30px;
+}
+.close{
+    width: 70px;
+    
 }

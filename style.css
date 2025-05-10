@@ -2,110 +2,150 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif   ;
 }
 body{
-    margin: 10px;
     background-color: #1c1c1c;
+}
+.container{
+    background:linear-gradient(to left, #1c1c1c, #feb47b, #feb47b);
+    float: right;
+    display: flex;
+    width: 50%;
+    height: 100vh;
+    align-items: center;
+    color: yellow;
 }
 h1{
-    color: aliceblue;
-}
-.fundo{
+    font-family: sans-serif;
     display: flex;
-    justify-content: center;
-   top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    align-items: center ;
-    background-color: #1c1c1c;
+    font-weight: 900;
+     font-size: 1801%;
+    color: #1c1c1c;
+}
+.links{
+    margin: 16px;
+    display: flex;
+    position: fixed;
+    bottom: 10px;   
+    left: 10px;
+    flex-direction: column;
+    gap: 5px;      
+    z-index: 9999;
+}
+.linkcadastro{
+    border-radius: 5px;
+    color: #1c1c1c;
+    text-decoration: none;
+    padding: 5px;
+    background:linear-gradient(to right, #ff7e5f, #feb47b);
+}
+.linklogin{
+    border-radius: 5px;
+    color: #1c1c1c;
+    text-decoration: none;
+    padding: 5px;
+    background:linear-gradient(to right, #ff7e5f, #feb47b);
 }
 .login{
-   
-    border-radius: 12px;
-    background-color: #3e92cc;
-    padding: 12px;
-    height: 450px;
-    width: 350px;
-    justify-items: center;
     display: flex;
+    position: fixed;
     align-items: center;
+    justify-content:space-between ;
     flex-direction: column;
-    justify-content: space-between;
-}h1
-{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 50px;
+    background-color: #feb47b;
+    width: 20%;
+    height: 50%;
+    margin-top: 14%;
+    margin-left: 14%;
+    border-radius: 12px;
+    padding: 12px;
 }
-input{
-   border: none;
-    width: 257px;
-    height: 30px;
+.caixadelogin{
+    border: none;
+  }
+  input {
+    border: none;
+    border-bottom: 2px solid #000;
+    background:transparent;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 200px;
+  }
+  label{
+    font-size: 130%;
+    font-weight: 600;
+  }
+  h2{
+    font-family: sans-serif;
+    font-size:332% ;
+    font-weight: 800;
+  }
+  p{
+    font-size: 130%;
+    font-weight: 800;
+  }
+ #btn{
+  border-radius: 5px;
+  color: #1c1c1c;
+  text-decoration: none;
+  padding: 5px;
+  background:linear-gradient(to right, #ff7e5f, #feb47b);
+ }
+  .cadastro{
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content:space-between ; 
+    flex-direction: column;
+    background-color: #feb47b;
+    width: 20%;
+    height: 50%;
+    margin-top: 14%;
+    margin-left: 14%;
+    border-radius: 12px;
+    padding: 12px;
+  }
+  #prev{
+    border-radius: 5px;
+    color: #1c1c1c;
+    min-height: 70px;
+    min-width: 100px;
+    text-decoration: none;
+    padding: 5px;
+    background:linear-gradient(to right, #ff7e5f, #feb47b);
+  }
+#next{
+  min-height: 70px;
+  min-width: 100px;
+  border-radius: 5px;
+  color: #1c1c1c;
+  text-decoration: none;
+  padding: 5px;
+  background:linear-gradient(to right, #ff7e5f, #feb47b);
 }
-.formulario{
- 
-  gap: 24px;
+.pokemons li{
+  box-shadow: 5px 5px 5px 5px black;
+  background: #ffffff;
+    border-radius: 5px;
+    list-style: none;
+    min-width: 200px;
+    padding: 12px;
+}
+ul{
+  margin: 32px;
   display: flex;
-  flex-direction: column; 
+  flex-wrap: wrap;
+  min-height: 200px;
+  gap: 16px;
+  justify-content: center;
 }
-.open{
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    width: 70px;
-    height: 30px;
-    background-color: #3e92cc;
-    border-radius: 12px;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+.poke {
+  background: red;
 }
-.close{
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    width: 70px;
-    height: 30px;
-    background-color: #3e92cc;
-    border-radius: 12px;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-.cadastro{
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    width: 70px;
-    height: 30px;
-    background-color: #3e92cc;
-    border-radius: 12px;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-.ull{
-    position: relative ;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-h2{
-    color: aliceblue;
-    height: 12px;   
-    position: relative;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 140px;
-}
-.close2{
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    width: 70px;
-    height: 30px;
-    background-color: #3e92cc;
-    border-radius: 12px;
-    color: white;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
+.informacoesPoke{
+  background: #ffffff;
+  height: 100%;
+  position: absolute;
 }

@@ -126,12 +126,24 @@ h1{
   background:linear-gradient(to right, #ff7e5f, #feb47b);
 }
 .pokemons li{
-  box-shadow: 5px 5px 5px 5px black;
-  background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 10px;
+    background: #ffffff;
     border-radius: 5px;
     list-style: none;
-    min-width: 200px;
+    min-width: 440px;
+    min-height: 170px;
     padding: 12px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform .5s;
+}
+.pokemons li:hover {
+  transform: scale(1.1);
+}
+.imgpoke img{
+  min-height: 150px;
+  max-height: 150px;
 }
 ul{
   margin: 32px;
@@ -142,10 +154,66 @@ ul{
   justify-content: center;
 }
 .poke {
-  background: red;
+  background: #ebeff4;
 }
 .informacoesPoke{
   background: #ffffff;
   height: 100%;
   position: absolute;
+}
+.containerpoke{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background-color:#ffffff;
+  min-height: 700px;
+  max-width: 500px;
+  border-radius: 36px;
+  box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 10px;
+}
+.descricao1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.div-p{
+  font-family: OCR A Std, monospace;
+  margin-top: -23px;
+}
+.namepoke{
+  font-size: 66px;
+  font-family: OCR A Std, monospace;
+}
+.descricao{
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 12px;
+  background: #1c1c1c;
+  margin-top: 20px;
+  color: #ffffff;
+  transition: transform .5s;
+}
+.descricao:hover {
+  transform: scale(1.32);
+}
+.next{
+  background: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  padding: 12px;
+  margin-left: 24px;
+  box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 10px;  
+}
+p{
+ display: flex;
+ margin-top: -60px; 
 }

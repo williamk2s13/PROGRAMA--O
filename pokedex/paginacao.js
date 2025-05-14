@@ -1,7 +1,9 @@
+
+import {cores} from "./cores.js"
 let offset = 0
 async function initPokedex(){
     const ul = document.querySelector(".pokemons")
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=20`,{
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon/?limit=16`,{
         headers: {
             "Content-type":"application/json; charset=utf-8"
         }
@@ -17,10 +19,12 @@ async function initPokedex(){
         })
         const dados = await data.json()
         ul.insertAdjacentHTML("beforeend",`
-            <li>
+            <li id=${item.name} style="background-color:${cores[dados.types[0].type.name]}">
+            <div class="ola">
             <p>${item.name}</p>
-            <img class="imgpoke" src="${dados.sprites.front_default}">
             <button id="${item.name}desc" class="descricao">descriçao</button>
+            </div>
+            <img class="imgpoke" src="${dados.sprites.other.dream_world.front_default}">
             </li>
             `)
             const descricao = document.getElementById(`${item.name}desc`)
@@ -32,9 +36,9 @@ async function initPokedex(){
                location.href = "/descricao"
            })
         } 
-        const prevBtn = document.querySelector("#prev")
+        const prevBtn = document.querySelector("#preve")
         
-        const btnNext = document.querySelector("#next")
+        const btnNext = document.querySelector("#nexte")
         btnNext.addEventListener("click",()=>{
             offset = offset+20
             prevBtn.removeAttribute("disabled")
@@ -54,7 +58,7 @@ async function initPokedex(){
     async function nextPage(){
     const ul = document.querySelector(".pokemons")
     ul.innerHTML = ""
-    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}`,{
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=16`,{
         headers: {
             "Content-type":"application/json; charset=utf-8"
         }
@@ -70,10 +74,14 @@ async function initPokedex(){
         })
         const dados = await data.json()
         ul.insertAdjacentHTML("beforeend",`
-            <li>
-                <p>${item.name}</p>
-                <img src="${dados.sprites.front_shiny}">
-                <button id="${item.name}desc" class="descricao">descriçao</button>
+                   <li id=${item.name} style="background-color:${cores[dados.types[0].type.name]}">
+             <div class="ola">
+            <p>${item.name}</p>
+            <button id="${item.name}desc" class="descricao">descriçao</button>
+            </div>
+                <div class="imgpoke">
+              <img src="${dados.sprites.other.dream_world.front_default}"> 
+                </div>
             </li>
             `)
             const descricao = document.getElementById(`${item.name}desc`)

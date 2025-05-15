@@ -23,6 +23,7 @@ async function initPokedex(){
             <div class="ola">
             <p>${item.name}</p>
             <button id="${item.name}desc" class="descricao">descriçao</button>
+            <button id="${item.name}fav" class="favorito">favo</button>
             </div>
             <img class="imgpoke" src="${dados.sprites.other.dream_world.front_default}">
             </li>
@@ -93,6 +94,56 @@ async function initPokedex(){
                location.href = "/descricao"
            })            
            }
+           function PokemonAdd() {
+            const UserId = localStorage.getItem("userId");
+            const botaoAdd = document.getElementById(`${item.name}fav`);
+            let eFavorito = false;
+    
+            botaoAdd.addEventListener("click", async () => {
+              const idFav = botaoAdd.getAttribute("data-fav");
+    
+              if (eFavorito) {
+                img.src = "./imagens/Botaofav/botaofav.svg";
+                await fetch(`http://localhost:3001/pokemon/${idFav}`, {
+                  method: "DELETE",
+                  headers: {
+                    "Content-Type": "application/json; charset=utf-8",
+                  },
+                });
+                botaoAdd.removeAttribute("data-fav");
+                eFavorito = !eFavorito;
+              } else {
+                const Pokemon = {
+                  name: item.name,
+                  img: dados.sprites.other.dream_world.front_default,
+                  userId: UserId,
+                  color: `${cores[dados.types[0].type.name]}`,
+                };
+    
+                const res = await fetch("http://localhost:3001/pokemon", {
+                  body: JSON.stringify(Pokemon),
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json; charset=utf-8",
+                  },
+                });
+                const response = await res.json();
+                botaoAdd.setAttribute("data-fav", response.id);
+                eFavorito = !eFavorito;
+              }
+            });
+          }
+    
+          PokemonAdd();
     }
-
-// nextPage()
+    async function PegarFavoritos() {
+        const userId = localStorage.getItem("userId");
+        const res = await fetch(`http://localhost:3001/pokemon/?userId=${userId}`);
+        const favoritos = await res.json();
+        const favo = document.getElementById("#fav");
+        favo.addEventListener("click",()=>{
+            console.log("ola")
+              location.href= "/favoritos"
+    })
+}
+PegarFavoritos()

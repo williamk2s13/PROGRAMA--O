@@ -20,6 +20,7 @@ function Login(){
     
         if(res.status === 200){
                 setTimeout(()=>{
+                    localStorage.setItem("userId")
                 location.href = "/pokedex"
             },3000)
     }

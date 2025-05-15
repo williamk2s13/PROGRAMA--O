@@ -17,6 +17,7 @@ function GetUser(){
             }
         })
         if(res.status === 201) {
+                localStorage.setItem("userId",userId)
             location.href = "/login"
         }
     })

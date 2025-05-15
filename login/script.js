@@ -17,12 +17,13 @@ function Login(){
                 'Content-Type':"application/json; charset=utf-8"
             }
         })
-    
+        const response = await res.json()
+    const userId = response.user.id
         if(res.status === 200){
                 setTimeout(()=>{
-                    localStorage.setItem("userId")
+                localStorage.setItem("userId", userId)
                 location.href = "/pokedex"
-            },3000)
+            },2000)
     }
         })
             

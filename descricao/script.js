@@ -5,9 +5,11 @@ async function adcdesc(){
     const desc = document.querySelector(".descricao1")
     desc.insertAdjacentHTML("beforeend",
         `
-         <div id=${pokemon.name} class="containerpoke" style="background-color:${cores[pokemon.types[0].type.name]}">
+        <div class="axl">
+     <div id=${pokemon.name} class="containerpoke" style="background-color:${cores[pokemon.types[0].type.name]}">
+     </div> 
          <p class="namepoke">${pokemon.name}</p>
-       <img class="imgpoke" src="${pokemon.sprites.other.dream_world.front_default}">
+       <img class="imgpok" src="${pokemon.sprites.other.dream_world.front_default}">
          <div class="div-p">
          <p class="ppoke">
                 <strong><em>Habilidade 1:</em></strong> ${
@@ -39,11 +41,13 @@ async function adcdesc(){
               pokemon.moves[3] ? pokemon.moves[3].move.name : "Não há"
             }, ${pokemon.moves[4] ? pokemon.moves[4].move.name : "Não há"} 
             </p>
-         </div>
-  </div>
+         
+        </div>
                        
 
         `
     )
 }
 adcdesc()
+       
+    

@@ -158,7 +158,6 @@ ul{
 .descricao1{
     display: flex;
     align-items: center;
-    justify-content: center;
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -261,7 +260,23 @@ p{
 .descricao2{
     display: flex;
     height: 90%;
-    margin-left: 60%;
-    background-color: #948989;
+    width: 54%;
+    margin-left: 41%;
+    background-color: #ffffff;
     padding: 24px;
+      box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 10px;  
+       border-radius: 20px;
+}
+.barra1 {
+  width: 100%;
+  background: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.progreco {
+  height: 100%;
+  background: green;
+  transition: width 0.3s ease;
+  border-radius: 10px;
 }

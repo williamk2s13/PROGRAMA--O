@@ -10,7 +10,12 @@ async function adcdesc(){
      </div> 
          <p class="namepoke">${pokemon.name}</p>
        <img class="imgpok" src="${pokemon.sprites.other.dream_world.front_default}">
-         <div class="div-p">
+       <div class="bloco"></div>
+         
+        </div>
+
+        <div class="descricao2">
+<div class="div-p">
          <p class="ppoke">
                 <strong><em>Habilidade 1:</em></strong> ${
                   pokemon.abilities[0].ability.name
@@ -41,7 +46,12 @@ async function adcdesc(){
               pokemon.moves[3] ? pokemon.moves[3].move.name : "Não há"
             }, ${pokemon.moves[4] ? pokemon.moves[4].move.name : "Não há"} 
             </p>
-         
+          <p class="ppoke">
+                        <strong><em>vida:</em></strong> ${
+                              pokemon.stats[0].base_stat
+                            }
+
+                            </p>
         </div>
                        
 
@@ -49,5 +59,4 @@ async function adcdesc(){
     )
 }
 adcdesc()
-       
     

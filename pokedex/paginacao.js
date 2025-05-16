@@ -34,7 +34,7 @@ async function initPokedex(){
             console.log("desc")
             console.log(dados,"dados")
             localStorage.setItem("pokemon",JSON.stringify(dados))
-               location.href = "/descricao"
+               location.href = "../descricao/index.html"
            })
         } 
         const prevBtn = document.querySelector("#preve")
@@ -91,7 +91,7 @@ async function initPokedex(){
             console.log("desc")
             console.log(dados,"dados")
             localStorage.setItem("pokemon",JSON.stringify(dados))
-               location.href = "/descricao"
+               location.href = "../descricao/index.html"
            })            
            }
            function PokemonAdd() {

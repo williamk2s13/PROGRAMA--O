@@ -149,9 +149,8 @@ ul{
       position: absolute;
       top: 0;
       left: 50%;
-      width: 500px;
-      height: 400px;
-      background-color: #00e859;
+      width: 760px;
+      height: 700px;
       border-radius: 50%;
       transform: translate(-50%, -50%);
       z-index: 0;
@@ -171,7 +170,7 @@ ul{
   margin-top: -23px;
 }
 .namepoke{
-      font-size: 32px;
+      font-size: 50px;
       margin: 20px 0 10px;
       font-weight: bold;
       z-index: 1;
@@ -216,21 +215,23 @@ p{
   height: 100vh;
 }
 .axl{
-      position: relative;
-      width: 400px;
-      height: 600px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      padding: 30px 20px 20px;
-      text-align: center;
-      overflow: hidden;
+  position: absolute;
+  left: 4%;
+  width: 600px;
+  height: 90%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px 20px;
+  text-align: center;
+  overflow: hidden;
 }
 .imgpok{
-        width: 200px;
-      margin: 10px 0;
-      z-index: 1;
-      position: relative;
+    width: 400px;
+    top: 60px;
+    margin: 10px 0;
+    z-index: 1;
+    position: relative;
 }
 .barra{
   display: flex;
@@ -245,5 +246,22 @@ p{
   font-size: 32px;
   margin-top: 60px;
   margin-left: 32px;
-  
+}
+.bloco{
+   position: absolute;
+      top: 100%;
+      left: 50%;
+      width: 760px;
+      height: 600px;
+      border-radius: 30%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      background-color: #d8d8d8;
+}
+.descricao2{
+    display: flex;
+    height: 90%;
+    margin-left: 60%;
+    background-color: #948989;
+    padding: 24px;
 }

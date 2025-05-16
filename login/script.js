@@ -22,11 +22,12 @@ function Login(){
         if(res.status === 200){
                 setTimeout(()=>{
                 localStorage.setItem("userId", userId)
-                location.href = "/pokedex"
+                location.href = "../pokedex/index.html"
             },2000)
     }
         })
             
         }
+        
     
 Login()

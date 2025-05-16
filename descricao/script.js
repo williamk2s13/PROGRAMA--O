@@ -24,7 +24,7 @@ const progrecove = `${(statve / maxStat) * 100}%`;
      </div> 
          <p class="namepoke">${pokemon.name}</p>
        <img class="imgpok" src="${pokemon.sprites.other.dream_world.front_default}">
-       <div class="bloco"></div>
+       <div class="bloco">  <p class="ola3"  style="background-color:${cores[pokemon.types[0].type.name]}">  ${pokemon.types[0].type.name}</p></div>
          
         </div>
 
@@ -32,7 +32,54 @@ const progrecove = `${(statve / maxStat) * 100}%`;
         
         <div class="descricao2">
         
-<div class="div-p">
+        <div class="div-p">
+        <p class="ppoke">
+        <strong><em>vida:</em></strong> ${
+             pokemon.stats[0].base_stat
+           }
+           </p>
+        
+           <div class="barra1">
+                <div class="progreco"
+                    style="width:${progrecov}">
+               </div>
+           </div>
+        
+        
+                   <p class="ppoke">
+        <strong><em>ataque:</em></strong> ${
+             pokemon.stats[1].base_stat
+           }
+            <div class="barra1">
+                <div class="progreco"
+                    style="width:${progrecoa}">
+               </div>
+           </div>
+        
+           </p>
+                   <p class="ppoke">
+        <strong><em>defesa:</em></strong> ${
+             pokemon.stats[2].base_stat
+           }
+            <div class="barra1">
+                <div class="progreco"
+                    style="width:${progrecod}">
+               </div>
+           </div>
+        
+           </p>
+                   <p class="ppoke">
+        <strong><em>velocidade:</em></strong> ${
+             pokemon.stats[5].base_stat
+           }
+            <div class="barra1">
+                <div class="progreco"
+                    style="width:${progrecove}">
+               </div>
+           </div>
+        
+           </p>
+        
 
          <p class="ppoke">
          
@@ -64,55 +111,13 @@ const progrecove = `${(statve / maxStat) * 100}%`;
             }, ${pokemon.moves[2] ? pokemon.moves[2].move.name : "Não há"}, ${
               pokemon.moves[3] ? pokemon.moves[3].move.name : "Não há"
             }, ${pokemon.moves[4] ? pokemon.moves[4].move.name : "Não há"} 
+            ${pokemon.types[0].type.name}
             </p>
+
+            
+
+            </div>
         
-                         <p class="ppoke">
-                        <strong><em>vida:</em></strong> ${
-                              pokemon.stats[0].base_stat
-                            }
-                            </p>
-
-                            <div class="barra1">
-                                 <div class="progreco"
-                                     style="width:${progrecov}">
-                                </div>
-                            </div>
-
-
-                                    <p class="ppoke">
-                        <strong><em>ataque:</em></strong> ${
-                              pokemon.stats[1].base_stat
-                            }
-                             <div class="barra1">
-                                 <div class="progreco"
-                                     style="width:${progrecoa}">
-                                </div>
-                            </div>
-
-                            </p>
-                                    <p class="ppoke">
-                        <strong><em>defesa:</em></strong> ${
-                              pokemon.stats[2].base_stat
-                            }
-                             <div class="barra1">
-                                 <div class="progreco"
-                                     style="width:${progrecod}">
-                                </div>
-                            </div>
-
-                            </p>
-                                    <p class="ppoke">
-                        <strong><em>velocidade:</em></strong> ${
-                              pokemon.stats[5].base_stat
-                            }
-                             <div class="barra1">
-                                 <div class="progreco"
-                                     style="width:${progrecove}">
-                                </div>
-                            </div>
-
-                            </p>
-        </div>
 
         `
     )

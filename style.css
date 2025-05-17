@@ -206,6 +206,16 @@ p{
       z-index: 1;
       position: relative;
 }
+.ppoke{
+  font-family: Cursive;
+     text-align: left;
+      font-style: italic;
+      font-size: 30px;
+      margin-top: 10px;
+      line-height: 1.5;
+      z-index: 1;
+      position: relative;
+}
 .caixa{
   display: flex;
   justify-content: center;
@@ -268,7 +278,7 @@ p{
        border-radius: 20px;
 }
 .barra1 {
-  width: 100%;
+  width: 150%;
   background: #ddd;
   height: 1%;
   border-radius: 10px;
@@ -284,10 +294,28 @@ p{
   display: flex;
     min-width: 106px;
     justify-content: center;
-    margin-top: 240px;
+    margin-top: 230px;
     position: absolute;
     left: 300px;
     padding: 5px;
     border-radius: 40px;
       box-shadow: rgba(0, 0, 0, 0.24) 5px 5px 10px;   
+}
+.ola4{
+  color: rgb(116, 116, 116);
+  margin-left: 40px;
+  font-size: 25px;
+  margin-top: -15px;
+}
+.barra2{
+  background: grey;
+  height: 1px;
+  border-radius: 3px;
+  width: 150%;
+}
+.stats{
+  font-family: Cursive
+}
+em{
+   font-family: Cursive;
 }

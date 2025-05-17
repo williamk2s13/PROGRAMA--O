@@ -93,7 +93,7 @@ async function initPokedex(){
             localStorage.setItem("pokemon",JSON.stringify(dados))
                location.href = "../descricao/index.html"
            })            
-           }
+           }  
            function PokemonAdd() {
             const UserId = localStorage.getItem("userId");
             const botaoAdd = document.getElementById(`${item.name}fav`);

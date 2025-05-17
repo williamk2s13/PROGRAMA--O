@@ -33,7 +33,7 @@ const progrecove = `${(statve / maxStat) * 100}%`;
         <div class="descricao2">
         
         <div class="div-p">
-        <p class="ppoke">
+        <p class="stats">
         <strong><em>vida:</em></strong> ${
              pokemon.stats[0].base_stat
            }
@@ -46,65 +46,64 @@ const progrecove = `${(statve / maxStat) * 100}%`;
            </div>
         
         
-                   <p class="ppoke">
+                   <p class="stats">
         <strong><em>ataque:</em></strong> ${
              pokemon.stats[1].base_stat
            }
             <div class="barra1">
                 <div class="progreco"
-                    style="width:${progrecoa}">
+                    style="width:${progrecoa}; background-color: #FF4500">
                </div>
            </div>
         
            </p>
-                   <p class="ppoke">
+                   <p class="stats">
         <strong><em>defesa:</em></strong> ${
              pokemon.stats[2].base_stat
            }
             <div class="barra1">
                 <div class="progreco"
-                    style="width:${progrecod}">
+                    style="width:${progrecod}; background-color: #7B68EE">
                </div>
            </div>
         
            </p>
-                   <p class="ppoke">
+                   <p class="stats">
         <strong><em>velocidade:</em></strong> ${
              pokemon.stats[5].base_stat
            }
             <div class="barra1">
                 <div class="progreco"
-                    style="width:${progrecove}">
+                    style="width:${progrecove}; background-color: #FFFF00">
                </div>
            </div>
         
            </p>
         
 
-         <p class="ppoke">
-         
-                <strong><em>Habilidade 1:</em></strong> ${
-                  pokemon.abilities[0].ability.name
-                }
-                </p>
-                <p class="ppoke">
-          <strong><em>Habilidade 2:</em></strong> 
-                        ${
-                          pokemon.abilities[1].ability.name
-                        }
-                        </p>
-                        <p class="ppoke">
-                        <strong><em>Experiência base:</em></strong> 
-                            ${
-                              pokemon.base_experience
-                            }
-                        </p>
-                        <p class="ppoke">
-                        <strong><em>índice do jogo:</em></strong> ${
-                              pokemon.game_indices[0].game_index
-                            }
-                            </p>
-                            <p class="ppoke"><strong><em>Movimentos:</em></strong> ${
+         <p class="ppoke">habilidade 1: 
+         </p>
+         <p class="ola4"> ${pokemon.abilities[0].ability.name}</p>
+
+         <div class="barra2"></div>
+
+                <p class="ppoke">Habilidade 2:</p>
+                       <p class="ola4">   ${ pokemon.abilities[1].ability.name} </p>
+
+                             <div class="barra2"></div>
+
+                        <p class="ppoke">Experiência base:</p>
+                          <p class="ola4">${pokemon.base_experience}</p>
+
+                                <div class="barra2"></div>
+                          
+                          <p class="ppoke">índice do jogo: </p>
+                          <p class="ola4">${pokemon.game_indices[0].game_index }</p>
+
+                                <div class="barra2"></div>
+
+                            <p class="ppoke">Movimentos:</p>
+                            <p class="ola4"> ${
                           pokemon.moves[0] ? pokemon.moves[0].move.name : "Não há"
                         }, ${
               pokemon.moves[1] ? pokemon.moves[1].move.name : "Não há"
@@ -121,6 +120,5 @@ const progrecove = `${(statve / maxStat) * 100}%`;
 
         `
     )
-}
+  }
 adcdesc()
-    

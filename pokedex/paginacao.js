@@ -106,6 +106,8 @@ async function nextPage() {
       location.href = "../descricao/index.html";
     });
   }
+
+
   function PokemonAdd() {
     const UserId = localStorage.getItem("userId");
     const botaoAdd = document.getElementById(`${item.name}fav`);
@@ -155,7 +157,7 @@ async function PegarFavoritos() {
   const favo = document.getElementById("#fav");
   favo.addEventListener("click", () => {
     console.log("ola");
-    location.href = "/favoritos";
+    location.href = "../favoritos";
   });
 }
 PegarFavoritos();

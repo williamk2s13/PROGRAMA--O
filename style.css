@@ -278,11 +278,12 @@ p {
   border-radius: 20px;
 }
 .barra1 {
-  width: 150%;
-  background: #ddd;
-  height: 1%;
-  border-radius: 10px;
-  overflow: hidden;
+    min-width: 116%;
+    max-width: 150%;
+    background: #ddd;
+    height: 1%;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .progreco {
   height: 100%;
@@ -311,7 +312,8 @@ p {
   background: grey;
   height: 1px;
   border-radius: 3px;
-  width: 150%;
+  min-width: 116%;
+  max-width: 150%;
 }
 .stats {
   font-family: Cursive;

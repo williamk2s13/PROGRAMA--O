@@ -8,7 +8,7 @@ async function initPokedex() {
     },
   });
   const response = await res.json();
-  console.log(response, "response");
+  //console.log(response, "response");
   const listPokemon = response.results;
   for (let item of listPokemon) {
     const data = await fetch(item.url, {
@@ -24,7 +24,7 @@ async function initPokedex() {
         cores[dados.types[0].type.name]
       }">
             <div class="ola">
-            <p>${item.name}</p>
+            <p>${item.name}  #${dados.id}</p>
             <button id="${item.name}desc" class="descricao">descriçao</button>
             <button id="${item.name}fav" class="favorito">favo</button>
             </div>
@@ -35,10 +35,10 @@ async function initPokedex() {
             `
     );
     const descricao = document.getElementById(`${item.name}desc`);
-    console.log(descricao, "button");
+    //console.log(descricao, "button");
     descricao.addEventListener("click", () => {
-      console.log("desc");
-      console.log(dados, "dados");
+     // console.log("desc");
+   //   console.log(dados, "dados");
       localStorage.setItem("pokemon", JSON.stringify(dados));
       location.href = "../descricao/index.html";
     });
@@ -88,7 +88,7 @@ async function nextPage() {
         cores[dados.types[0].type.name]
       }">
              <div class="ola">
-            <p>${item.name}</p>
+            <p>${item.name}  #${dados.id}</p>
             <button id="${item.name}desc" class="descricao">descriçao</button>
             </div>
                 <div class="imgpoke">
@@ -98,15 +98,14 @@ async function nextPage() {
             `
     );
     const descricao = document.getElementById(`${item.name}desc`);
-    console.log(descricao, "button");
+ //   console.log(descricao, "button");
     descricao.addEventListener("click", () => {
-      console.log("desc");
-      console.log(dados, "dados");
+    //  console.log("desc");
+   //   console.log(dados, "dados");
       localStorage.setItem("pokemon", JSON.stringify(dados));
       location.href = "../descricao/index.html";
     });
   }
-
 
   function PokemonAdd() {
     const UserId = localStorage.getItem("userId");
@@ -117,7 +116,6 @@ async function nextPage() {
       const idFav = botaoAdd.getAttribute("data-fav");
 
       if (eFavorito) {
-        img.src = "./imagens/Botaofav/botaofav.svg";
         await fetch(`http://localhost:3001/pokemon/${idFav}`, {
           method: "DELETE",
           headers: {
@@ -134,12 +132,12 @@ async function nextPage() {
           color: `${cores[dados.types[0].type.name]}`,
         };
 
-        const res = await fetch("http://localhost:3001/pokemon", {
+        const res = await fetch("http://localhost:3001/pokemon/", {
           body: JSON.stringify(Pokemon),
           method: "POST",
           headers: {
-            "Content-Type": "application/json; charset=utf-8",
-          },
+            "Content-Type": "application/json; charset=utf-8"
+          }
         });
         const response = await res.json();
         botaoAdd.setAttribute("data-fav", response.id);
@@ -150,14 +148,3 @@ async function nextPage() {
 
   PokemonAdd();
 }
-async function PegarFavoritos() {
-  const userId = localStorage.getItem("userId");
-  const res = await fetch(`http://localhost:3001/pokemon/?userId=${userId}`);
-  const favoritos = await res.json();
-  const favo = document.getElementById("#fav");
-  favo.addEventListener("click", () => {
-    console.log("ola");
-    location.href = "../favoritos";
-  });
-}
-PegarFavoritos();
